@@ -3,21 +3,49 @@
   <head>
     <title>Sistema de Ações</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      body {
+        background-color: #ffffff;
+        color:rgb(0, 0, 0);
+      }
+      form {
+       background-color: rgb(255, 255, 255);
+       padding:15px;
+       position: absolute;
+       top:5%;
+       left:50%;
+       transform: translate(-50%, 5%);
+      }
+      #label {
+        display:inline;
+        margin-bottom: 5px;
+
+      }
+      #input {
+        display: inline-block;
+        border:none;
+        border-bottom:1px solid black;
+      }
+    </style>
   </head>
   <body>
-    <h1>Sistema de Ações</h1>
     <form action="">
+      <h1>Sistema de Ações</h1>
       <table>
         <tr>
-          <td><label for="login">Login:</label></td>
-          <td><input type="email"></td>
+          <td><label  id="label" for="login">Login:</label></td>
         </tr>
         <tr>
-          <td><label for="password">Senha:</label></td>
-          <td><input type="password"></td>
+          <td><input id="input" type="email"></td>
         </tr>
         <tr>
-          <td><input type="submit"></td>
+          <td><label id="label" for="password">Senha:</label></td>
+        </tr>
+        <tr>
+          <td><input id="input" type="password"></td>
+        </tr>
+        <tr>
+          <td><input id="btn" type="submit"></td>
         </tr>
       </table>
     </form>
