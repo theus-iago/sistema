@@ -5,7 +5,7 @@ const User = require('../models/Users');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Bem Vindo' });
+  res.render('index', { title: 'Bem Vindo', erroLogin:false });
 });
 
 router.post('/acesso', async(req,res)=>{
@@ -21,11 +21,11 @@ router.post('/acesso', async(req,res)=>{
   const users = await user.find()
   users.forEach((a)=> {
    if(a.name == login && a.senha == senha){
-     res.render('paginainicial', {users});
+     res.render('paginainicial', { a });
    }
 
 })
-res.send(`Usuário não encontrado`)
+res.render('index', {title: 'Bem vindo', erroLogin:true});
 });
 
 
