@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
-const DB_USER =  'jorgechrystiann'
-const DB_PASSWORD= encodeURIComponent('jc1234')
-mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.qvtofbq.mongodb.net/?retryWrites=true&w=majority`)
+const DB_USER =  'Ana'
+const DB_PASSWORD= encodeURIComponent('123')
+mongoose.connect('mongodb://127.0.0.1:27017/EEQSBD')
  .then(() =>{
     console.log("Banco de Dados MongoDB conectado com sucesso");
  })

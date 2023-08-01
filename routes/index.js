@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 router.post('/acesso', async(req,res)=>{
 
   let login = req.body.login
-  let senha = req.body.senha
+  let senha = req.body.password
 
   .then(() =>{
     console.log("Banco de Dados MongoDB conectado com sucesso");
