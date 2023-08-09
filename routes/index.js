@@ -11,15 +11,12 @@ router.get('/', function(req, res, next) {
 router.post('/acesso', async(req,res)=>{
 
   let login = req.body.login
-  let senha = req.body.password
+  let senha = req.body.senha
 
-  .then(() =>{
-    console.log("Banco de Dados MongoDB conectado com sucesso");
- })
- .catch(err => console.log(err))
-
-  const users = await user.find()
+  const users = await User.find()
+  console.log(login,senha)
   users.forEach((a)=> {
+    console.log(a.name,a.senha)
    if(a.name == login && a.senha == senha){
      res.render('paginainicial', { a });
    }
