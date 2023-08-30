@@ -9,15 +9,16 @@
     <script src="/javascripts/index.js"defer></script>
 </head>
 <body>
-    <div class="autenticacao" id="autenticacao">
-        <form action="newuser" method="post" id="form2">
+  <div class="autenticacao" id="autenticacao">
+    <form action="newuser" method="post" class="form-cadastro">
             <h1>Cadastro</h1>
-            
+            <label for="fullname">Nome Completo:</label>
+            <input type="text" name="fullname" id="nome" placeholder="João Gustavo da Silva">
             <label for="login">Usuário:</label>
-            <input type="text" name="name" placeholder="João Carlos">
+            <input type="text" name="name" placeholder="Jão">
             <br>
             <label for="idade">Idade:</label>
-            <input type="text" placeholder="sua idade" name="age">
+            <input type="number" placeholder="16" name="age">
             <br>
             <label for="Unidade_Federativa" >Unidade Federativa:</label>
             <input type="text" placeholder="RN" name="UF">
@@ -26,15 +27,17 @@
             <input type="text" placeholder="Admininstração" name="acoes">
             <br>
             <label for="senha">Senha:</label>
-            <input type="password" name="senha"  placeholder="1234@exemplo">
+            <input type="password" name="senha"  placeholder="Crie uma senha">
             <br>
-            <div class="box3" onclick="login()"> 
-              <input id="btn" type="button" value="Voltar">
-              <hr>
-            </div>
-            <div class="box4">
-              <input  id="btn" type="submit" value="Cadastrar">
-              <hr>
+            <div class="container">
+              <div class="box3" onclick="login()">
+                <input id="btn" type="button" value="Voltar">
+                <hr>
+              </div>
+              <div class="box4">
+                <input  id="btn" type="submit" value="Cadastrar">
+                <hr>
+              </div>
             </div>
           </form>
     </div>

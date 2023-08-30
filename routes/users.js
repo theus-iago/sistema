@@ -9,13 +9,13 @@ router.get('/novouser',function(req,res){
   res.render("novoCadastro",{})
 });
 router.post('/newuser',async (req,res)=>{
- const {name,age,UF,acoes,senha} = req.body
+ const {fullname,name,age,UF,acoes,senha} = req.body
  const user = {
-  name,age, UF,acoes,senha
+  fullname,name,age, UF,acoes,senha
  }
  try {
   await User.create(user)
-  res.status(201).json({message:'Usuario criado com sucesso!'})
+  res.status(201).json({message:'Usuario criado com sucesso! Retorne para a tela de login'})
  } catch (error) {
   res.status(500).json({error:error})
  }

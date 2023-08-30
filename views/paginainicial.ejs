@@ -48,31 +48,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <title>Página Inicial</title>
+ <!--    <link rel="stylesheet" href="/stylesheets/style.css"/> -->
     <link rel="shortcut icon" href="/images/imagem.png" type="image/x-icon">
     <script src="/javascripts/index.js"defer></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+      * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      body {
+        background-image: linear-gradient(-45deg, rgb(255, 0, 0), rgb(255, 136, 106), rgb(255, 230, 120),rgb(255, 193, 111));
+        background-size:300% 300%;
+        color:white;
+        font-family: 'Poppins', sans-serif;
+        height:100vh;
+        animation:gradient 10s infinite alternate-reverse ease-in-out;
+      }
+      nav {
+        height:100px;
+        background-color: #212121;
+        padding:16px;
+        display:flex;
+        align-items: center;
+        justify-content:end;
+        font-size:1.1em;
+      }
+      nav a {
+        margin:5px;
+        margin-right:15px;
+        text-decoration:none;
+        color:white;
+      }
+      nav a:hover {
+        text-decoration:underline;
+      }
+      .imagem-box {
+        width:1500px;
+        display:flex;
+        justify-content:start;
+      }
+      .logo {
+        border:2px solid rgb(255, 0, 0);
+        border-radius:50%;
+        display: inline;
+        width:80px;
+      }
+      .btn-box {
+        display:inline;
+      }
+      span {
+        background-color:rgb(255, 0, 0);
+        border-radius:15px;
+        height:4px;
+        width:35px;
+        display:block;
+        margin:3px;
+      }
+      span:nth-child(1){
+        
+      }
+      span:nth-child(2){
+        
+      }
+      span:nth-child(3){
+        
+      }
+      input {
+        display:none;
+      }
+      #btn:checked + span {
+        background-color: lime;   
+      } 
+      main {
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+        font-family:'Poppins', sans-serif;
+        text-align: center;
+        width:100vw;
+        position: relative;
+      }
+      main> .box {
+        background-color:white;
+        color:black;
+        width:60vw;
+        padding:16px;
+        border-bottom-left-radius:30px;
+        border-bottom-right-radius:30px;
+      }
+    </style>
 </head>
-<body id="body">
-   <div class="container">
-    <h1>Bem-Vindo ao sistema <%= a.name %>!</h1>
-       <ul>
-           <li>
-            <label for="">Nome: <%= a.name %></label> 
-           </li>
-           <li>
-            <label for="">Idade: <%= a.age %></label> 
-           </li>
-           <li>
-            <label for="">UF: <%= a.UF %></label> 
-           </li>
-           <li>
-            <label for="">Ações: <%= a.acoes %></label> 
-           </li>
-           <li>
-            <label for="">Senha: <%= a.senha %></label> 
-           </li>
-       </ul>
-   </div>
+<body>
+   <nav>
+    <div class="imagem-box"><img src="/images/acoes.png" alt="logo" class="logo"></div>
+     <a href="#">Home</a>
+     <a href="#">Settings</a>
+     <a href="#">Contact</a>
+     <a href="#">Users</a>
+     <div class="btn-box">
+       <input type="checkbox" name="btn" id="btn">
+       <label for="btn">
+         <span></span>
+         <span></span>
+         <span></span>
+        </label>
+     </div>
+   </nav>
+   <main>
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ullam explicabo ad ducimus mollitia voluptatum aliquam enim <br> eius amet. Commodi vero culpa cum fugit mollitia pariatur quia ipsum <br> ab eius perspiciatis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ullam explicabo ad ducimus mollitia voluptatum aliquam enim <br> eius amet. Commodi vero culpa cum fugit mollitia pariatur quia ipsum <br> ab eius perspiciatis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ullam explicabo ad ducimus mollitia voluptatum aliquam enim <br> eius amet. Commodi vero culpa cum fugit mollitia pariatur quia ipsum <br> ab eius perspiciatis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ullam explicabo ad ducimus mollitia voluptatum aliquam enim <br> eius amet. Commodi vero culpa cum fugit mollitia pariatur quia ipsum <br> ab eius perspiciatis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ullam explicabo ad ducimus mollitia voluptatum aliquam enim <br> eius amet. Commodi vero culpa cum fugit mollitia pariatur quia ipsum <br> ab eius perspiciatis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Ullam explicabo ad ducimus mollitia voluptatum aliquam enim <br> eius amet. Commodi vero culpa cum fugit mollitia pariatur quia ipsum <br> ab eius perspiciatis.</p>
+
+    </div>
+   </main>
+   <footer></footer>
 </body>
 </html>
