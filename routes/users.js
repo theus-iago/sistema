@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 router.get('/novouser',function(req,res){
   res.render("novoCadastro",{})
 });
-router.post('/newuser',async (req,res)=>{
+router.post('/newuser', async (req,res)=>{
  const {fullname,name,age,UF,acoes,senha} = req.body
  const user = {
   fullname,name,age, UF,acoes,senha
@@ -19,5 +19,6 @@ router.post('/newuser',async (req,res)=>{
  } catch (error) {
   res.status(500).json({error:error})
  }
-})
+});
+
 module.exports = router;
